@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<form action="/create_post" method="post">
+    <input placeholder="Titulek" type="text" name="title" class="form-control mt-1">
+    <input placeholder="Popisek" type="text" name="description" class="form-control mt-1">
+    <textarea name="content" placeholder="Obsah" id="" cols="30" rows="10" class="form-control mt-1"></textarea>
+    <input type="submit" class="btn btn-primary form-control mt-1">
+    <a class="btn btn-secondary form-control mt-1" href="/">Vrátit zpět</a>
+</form>
+
+{% endblock %}

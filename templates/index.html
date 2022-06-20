@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% for post in posts %}
+
+<section class="form-control mt-2">
+    <div class="title">
+        {{ post.title }}
+    </div>
+    <div class="description">
+        {{ post.description }}
+    </div>
+    <div class="action mt-1">
+        <a class="btn btn-primary" href="/post/{{ post.id }}">Zobrazit</a>
+    </div>
+</section>
+
+{% endfor %}
+
+<a class="btn btn-secondary mt-2" href="/create_post">Vytvořit článek</a>
+
+{% endblock %}
